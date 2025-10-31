@@ -17,6 +17,14 @@ fetch(endpoint)
   gif-container = document.querySelector('#gif-container');
 
   fetch-gifs = document.querySelector('#fetch-gifs');
+  fetch-gifs.addEventListener('click', () => {
 
-  console.log(fetch-gifs);
-  console.log(gif-container);
+for (let i = 0; i < images.length; i++) {
+    const imageUrl = images[i];
+    img.src = data.data[i].images.fixed_height.url;
+    gifContainer.innerHTML += `<img src="${imageUrl}" class="col-3 mb-3" alt="Random Image">`;
+  }
+
+    console.log(fetch-gifs);
+    console.log(gif-container);
+  });
